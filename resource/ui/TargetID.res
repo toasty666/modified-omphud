@@ -159,12 +159,27 @@
 		"scaleImage"	"1"
 	}
 	
+	"KillStreakIcon"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"KillStreakIcon"
+		"xpos"			"30"
+		"ypos"			"27"
+		"zpos"			"12"
+		"wide"			"8"
+		"tall"			"8"
+		"visible"		"0"
+		"enabled"		"1"
+		"image"			"../hud/leaderboard_streak"
+		"scaleImage"	"1"
+	}
+	
 	"MoveableSubPanel"
 	{
 		"ControlName"		"EditablePanel"
 		"fieldName"		"MoveableSubPanel"
-		"xpos"			"0"
-		"ypos"			"0"
+		"xpos"			"9999" // omp -- fix glitch where this is visible in spectator view.
+		"ypos"			"9999"
 		"zpos"			"0"
 		"wide"			"32"
 		"tall"			"36"

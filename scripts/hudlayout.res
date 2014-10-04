@@ -1,5 +1,20 @@
 "Resource/HudLayout.res"
 {
+	"Rainbow_Konr"
+	{
+		"visible"		"1"
+		"ControlName"	"CTFImagePanel"
+		"fieldName"		"Rainbow_Konr"
+		"xpos"			"c-64"
+		"ypos"			"c-64"
+		"zpos"			"3"
+		"wide"			"128"
+		"tall"			"128"
+		"enabled"		"1"
+		"image"			"replay/thumbnails/rainbow_konr"
+		"scaleImage"	"1"
+	}
+
 	HudPlayerStatus
 	{
 		"fieldName" "HudPlayerStatus"
@@ -17,14 +32,14 @@
 		"visible" "1"
 		"enabled" "1"
 		"xpos"	"c100"
-		"ypos"	"c100"
+		"ypos"	"c54"
 		"wide"	"132"
-		"tall"	"40"
+		"tall"	"132"
 		
 		"xpos_minmode"	"c50"
-		"ypos_minmode"	"c70"
+		"ypos_minmode"	"c37"
 		"wide_minmode"	"92"
-		"tall_minmode"	"26"
+		"tall_minmode"	"92"
 	}
 	
 	HudObjectiveStatus
@@ -32,7 +47,7 @@
 		"fieldName" "HudObjectiveStatus"
 		"visible" "1"
 		"enabled" "1"
-		"xpos"	"9999"
+		"xpos"	"0"
 		"ypos"	"0"
 		"wide"	"f0"
 		"tall"	"480"
@@ -43,16 +58,14 @@
 		"fieldName" "HudKothTimeStatus"
 		"visible" "1"
 		"enabled" "1"
-		"xpos"	"c-100"
+		"xpos"	"c-125"
 		"ypos"	"0"
-		"wide"	"200"
-		"tall"	"60"
+		"wide"	"250"
+		"tall"	"32"
 		
-		"blue_active_xpos"			"16"
-		"blue_active_xpos_minmode"	"55"
+		"blue_active_xpos"			"50"
 	
-		"red_active_xpos"			"106"
-		"red_active_xpos_minmode"	"105"
+		"red_active_xpos"			"150"
 	}	
 
 	HudItemEffectMeter
@@ -78,14 +91,14 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"xpos"			"c-100"
-		"ypos"			"c88"
+		"ypos"			"c52" // omp -- 2 before due to low-res grid.
 		"wide"			"332"
-		"tall"			"52"
+		"tall"			"134"
 		
 		"xpos_minmode"	"c-100"
-		"ypos_minmode"	"c68" // omp -- 2 before due to low-res grid.
+		"ypos_minmode"	"c36" // omp -- 1 before due to low-res grid.
 		"wide_minmode"	"242"
-		"tall_minmode"	"28"
+		"tall_minmode"	"93"
 	}
 	
 	HudDemomanCharge
@@ -93,11 +106,11 @@
 		"fieldName"		"HudDemomanCharge"
 		"visible"		"1"
 		"enabled"		"1"
-		"xpos"			"c110"
-		"ypos"			"c110"
+		"xpos"			"c-100"
+		"ypos"			"c88"
 		"zpos"			"1"			// draw in front of ammo
 		"wide"			"200"
-		"tall"			"80"
+		"tall"			"6"
 		"MeterFG"		"White"
 		"MeterBG"		"Gray"
 	}	
@@ -192,21 +205,21 @@
 	{
 		"fieldName"				"CHudAccountPanel"
 		"xpos"					"c-100"
-		"ypos"					"c70"
+		"ypos"					"c46"
 		"wide"					"200"
-		"tall"  				"18"
+		"tall"  				"46"
 		"visible" 				"1"
 		"enabled" 				"1"
 		"PaintBackgroundType"	"2"
 	}
 	
-	CHealthAccountPanel
+		CHealthAccountPanel
 	{
 		"fieldName"				"CHealthAccountPanel"
-		"xpos"					"10"
-		"xpos_minmode"			"61"
-		"ypos"					"r30"
-		"ypos_minmode"			"r134"
+		"xpos"					"245"
+		"xpos_minmode"			"9999"
+		"ypos"					"r100"
+		"ypos_minmode"			"9999"
 		"wide"					"116"
 		"tall"  				"180"
 		"visible" 				"1"
@@ -219,12 +232,14 @@
 		"fieldName"				"CDamageAccountPanel"
 		"xpos"					"0"
 		"ypos"					"0"
+		"zpos"					"2" // omp -- place over bonus cross.
 		"wide"					"f0"
 		"tall"					"480"
 		"visible" 				"1"
 		"enabled" 				"1"
 		"PaintBackgroundType"	"2"
 	}
+	
 	
 	DisguiseStatus
 	{
@@ -244,10 +259,16 @@
 		"enabled" 	"1"
 		"xpos"		"c-100"
 		"ypos"		"c10"
-		"wide"	 	"0"
-		"tall"	 	"0"
+		"wide"	 	"200"
+		"tall"	 	"40"
 		"priority"	"40"
 		"priority_lodef"	"5"
+
+		if_vr
+		{
+			"ypos"		"370"
+			"x_offset"	"20"
+		}
 	}
 	
 	CSpectatorTargetID
@@ -257,8 +278,8 @@
 		"enabled" 	"1"
 		"xpos"		"c-100"
 		"ypos"		"c100"
-		"wide"	 	"0"
-		"tall"	 	"0"
+		"wide"	 	"200"
+		"tall"	 	"40"
 		"priority"	"40"
 		"priority_lodef" "35"
 		
@@ -274,9 +295,16 @@
 		"xpos"		"c-100"
 		"ypos"		"c100"
 		"zpos"		"1" // omp -- place above health cross.
-		"wide"	 	"0"
-		"tall"	 	"0"
+		"wide"	 	"200"
+		"tall"	 	"40"
 		"priority"	"35"
+
+		if_vr
+		{
+			"ypos"		"330"
+			"x_offset"	"20"
+		}
+
 	}
 	
 	BuildingStatus_Spy
@@ -284,10 +312,8 @@
 		"fieldName" "BuildingStatus_Spy"
 		"visible"	"1"
 		"enabled"	"1"
-		"xpos"		"0"	[$WIN32]
-		"ypos"		"0"	[$WIN32]
-		"xpos"		"32"	[$X360]
-		"ypos"		"16"	[$X360]		
+		"xpos"		"-15"
+		"ypos"		"0"
 		"wide"		"640"
 		"tall"		"480"
 		
@@ -299,12 +325,8 @@
 		"fieldName" "BuildingStatus_Engineer"
 		"visible"	"1"
 		"enabled"	"1"
-		"xpos"		"0"
-		"xpos_hidef"		"32"
-		"xpos_lodef"		"40"
+		"xpos"		"-15"
 		"ypos"		"0"
-		"ypos_hidef"		"16"
-		"ypos_lodef"		"25"
 		"wide"		"640"
 		"tall"		"480"
 		
@@ -543,9 +565,24 @@
 		"TextFont"				"Default"
 		"ItemFont"				"Default"
 		"ItemFontPulsing"		"Default"
-
 	}
 
+	HudSpellMenu
+	{
+		"fieldName" "HudSpellMenu"
+		"visible" "1"
+		"enabled" "1"
+		"wide"	 "640"
+		"tall"	 "480"
+		"zpos" 	"2"
+		"xpos"			"10"
+		"ypos"			"r30"
+		
+		"TextFont"				"Default"
+		"ItemFont"				"Default"
+		"ItemFontPulsing"		"Default"
+	}
+	
 	HudCloseCaption
 	{
 		"fieldName" "HudCloseCaption"
@@ -823,10 +860,10 @@
 		"fieldName"				"ArenaWinPanel"
 		"visible"				"1"
 		"enabled"				"1"
-		"xpos"					"c-225"
-		"ypos"					"250"
-		"wide"					"450"
-		"tall"					"218"
+		"xpos"					"c-180"
+		"ypos"					"r132"
+		"wide"					"360"
+		"tall"					"132"
 	}
 	
 	PVEWinPanel
@@ -932,10 +969,11 @@
 		"fieldName" 	"HudMenuEngyBuild"
 		"visible" 		"1"
 		"enabled" 		"1"
-		"xpos"			"c-225"
-		"ypos"			"c-55"
-		"wide"			"450"
-		"tall"			"195"
+		"xpos"			"c-130"
+		"ypos"			"c88"
+		"zpos"			"1"
+		"wide"			"260"
+		"tall"			"108"
 		"PaintBackgroundType"	"0"
 	}
 	
@@ -944,10 +982,24 @@
 		"fieldName" 	"HudMenuEngyDestroy"
 		"visible" 		"1"
 		"enabled" 		"1"
-		"xpos"			"c-225"
-		"ypos"			"c-59"
-		"wide"			"450"
-		"tall"			"200"
+		"xpos"			"c-130"
+		"ypos"			"c88"
+		"zpos"			"1"
+		"wide"			"260"
+		"tall"			"108"
+		"PaintBackgroundType"	"0"
+	}
+
+	"HudEurekaEffectTeleportMenu"
+	{
+		"fieldName" 	"HudEurekaEffectTeleportMenu"
+		"visible" 		"1"
+		"enabled" 		"1"
+		"xpos"			"c-66"
+		"ypos"			"c88"
+		"zpos"			"1"
+		"wide"			"132"
+		"tall"			"108"
 		"PaintBackgroundType"	"0"
 	}
 	
@@ -956,13 +1008,11 @@
 		"fieldName" 	"HudMenuSpyDisguise"
 		"visible" 		"1"
 		"enabled" 		"1"
-		"xpos"			"c-235"
-		"ypos"			"c-52"
-		"ypos_hidef"	"c-42"
-		"ypos_lodef"	"c-42"
-		"wide"			"470"
-		"tall"			"200"	[$WIN32]
-		"tall"			"180"	[$X360]
+		"xpos"			"c-130"
+		"ypos"			"c108"
+		"zpos"			"1"
+		"wide"			"260"
+		"tall"			"88"
 		"PaintBackgroundType"	"0"
 	}	
 	
@@ -972,9 +1022,9 @@
 		"visible"		"1"
 		"enabled"		"1"
 		"xpos"			"c-100"
-		"ypos"			"c68" // omp -- 2 before due to low-res grid.
+		"ypos"			"c64" // omp -- 2 before due to low-res grid.
 		"wide"			"200"
-		"tall"			"26"
+		"tall"			"30"
 	}	
 
 	HudTeamGoal
@@ -1068,9 +1118,9 @@
 		"visible"				"0"
 		"enabled"				"1"
 		"xpos"					"c-60"
-		"ypos"					"-70"
+		"ypos"					"-72"
 		"wide"					"120"
-		"tall"					"68"
+		"tall"					"70"
 	}
 
 	HudStopWatch
@@ -1090,7 +1140,7 @@
 		"visible"				"1"
 		"enabled"				"1"
 		"xpos"					"c-320"
-		"ypos"					"300"
+		"ypos"					"c39" // omp -- place above item meters.
 		"wide"					"640"
 		"tall"					"100"
 	}
@@ -1192,7 +1242,7 @@
 		"visible"				"0"
 		"enabled"				"1"
 		"xpos"					"r210"
-		"ypos"					"c16"
+		"ypos"					"c113"
 		"zpos"					"10"
 		"wide"					"200"
 		"tall"					"1000"
@@ -1295,6 +1345,32 @@
 		"tall"			"150"
 	}
 
+
+	"CTFKillStreakNotice"
+	{
+		"fieldName"		"CTFKillStreakNotice"
+		"xpos"			"0"			
+		"ypos"			"0"
+		"wide"			"640"
+		"tall"			"480"
+		"visible"		"1"
+		"enabled"		"1"
+		"bgcolor_override"	"0 0 0 0"
+		"PaintBackgroundType"	"0" // rounded corners
+	}
+
+	"HudMenuTauntSelection"
+	{
+		"fieldName" 	"HudMenuTauntSelection"
+		"visible" 		"1"
+		"enabled" 		"1"
+		"xpos"			"r125"
+		"ypos"			"c-130"
+		"wide"			"150"
+		"tall"			"250"
+		"PaintBackgroundType"	"0"
+	}
+
 	"OmpCrosshairPlus"
 	{
 		"controlName" "CExLabel"
@@ -1322,6 +1398,22 @@
 		"ypos" "c-100"
 		"wide" "200"
 		"tall" "202"
+		"visible" "0"
+		"enabled" "0"
+		"textAlignment" "center"
+	}
+	
+	"OmpCrosshairDot"
+	{
+		"controlName" "CExLabel"
+		"fieldName" "OmpCrosshairDot"
+		"font" "Crosshairs22"
+		"fgcolor" "255 0 255 255"
+		"labelText" "3"
+		"xpos" "c-103"
+		"ypos" "c-100"
+		"wide" "201"
+		"tall" "201"
 		"visible" "0"
 		"enabled" "0"
 		"textAlignment" "center"

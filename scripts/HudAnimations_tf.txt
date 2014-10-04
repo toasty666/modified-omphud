@@ -204,11 +204,11 @@ event KeyHintMessageHide
 //Health Bonus Pulse
 event HudHealthBonusPulse
 {
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"150"		Linear 0.0 0.2
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"75"		Linear 0.2 0.2
+	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"		Linear 0.0 0.2
+	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"		Linear 0.2 0.2
 	
-	Animate PlayerStatusHealthValue			FgColor		"80 160 255 255"	Accel 0.0 0.0
-	Animate PlayerStatusHealthValueSpec		FgColor		"100 180 255 255"	Accel 0.0 0.0
+	Animate PlayerStatusHealthValue			FgColor		"60 140 255 255"	Accel 0.0 0.0
+	Animate PlayerStatusHealthValueSpec		FgColor		"60 140 255 255"	Accel 0.0 0.0
 
 	RunEvent HudHealthBonusPulseLoop	0.4
 }
@@ -233,11 +233,11 @@ event HudHealthBonusPulseStop
 //Health Dying Pulse
 event HudHealthDyingPulse
 {
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"255"		Linear 0.0 0.075
+	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"		Linear 0.0 0.075
 	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"			Linear 0.125 0.075
 	
 	Animate PlayerStatusHealthValue			FgColor		"230 0 0 255"	Accel 0.0 0.0
-	Animate PlayerStatusHealthValueSpec		FgColor		"OmpSpecHPLow"	Accel 0.0 0.0
+	Animate PlayerStatusHealthValueSpec		FgColor		"230 0 0 255"	Accel 0.0 0.0
 	
 	RunEvent HudHealthDyingPulseLoop	0.25
 }
@@ -264,14 +264,14 @@ event HudLowAmmoPulse
 	Animate	HudWeaponLowAmmoImage		Alpha		"255"		Linear 0.0 0.075
 	Animate	HudWeaponLowAmmoImage		Alpha		"0"			Linear 0.125 0.075
 	
-	Animate AmmoInClip			FgColor		"255 10 10 255"	Linear 0.0 0.075
-	Animate AmmoInClip			FgColor		"255 20 20 255"	Linear 0.125 0.075
+	Animate AmmoInClip			FgColor		"230 0 0 255"	Linear 0.0 0.075
+	Animate AmmoInClip			FgColor		"230 0 0 255"	Linear 0.125 0.075
 
-	Animate AmmoInReserve		FgColor		"255 10 10 255"	Linear 0.0 0.075
-	Animate AmmoInReserve		FgColor		"255 20 20 255"	Linear 0.125 0.075
+	Animate AmmoInReserve		FgColor		"230 0 0 255"	Linear 0.0 0.075
+	Animate AmmoInReserve		FgColor		"230 0 0 255"	Linear 0.125 0.075
 
-	Animate AmmoNoClip			FgColor		"255 10 10 255"	Linear 0.0 0.075
-	Animate AmmoNoClip			FgColor		"255 20 20 255"	Linear 0.125 0.075
+	Animate AmmoNoClip			FgColor		"230 0 0 255"	Linear 0.0 0.075
+	Animate AmmoNoClip			FgColor		"230 0 0 255"	Linear 0.125 0.075
 
 	RunEvent HudLowAmmoPulseLoop	0.25
 }
@@ -348,9 +348,8 @@ event FlagOutline
 	Animate OutlineImage	Position	"c-200 140"		Linear 0.1 0.2
 	Animate OutlineImage	Size		"400 200"		Linear 0.1 0.2
 
-	Animate OutlineImage	Position	"c-50 r137"		Linear 0.7 0.2	[$WIN32]
-	Animate OutlineImage	Position	"c-50 r158"		Linear 0.7 0.2	[$X360]
-	Animate OutlineImage	Size		"100 50"		Linear 0.7 0.2
+	Animate OutlineImage	Position	"c0 r38"		Linear 0.7 0.2
+	Animate OutlineImage	Size		"0 0"			Linear 0.7 0.2
 	
 	Animate OutlineImage	Alpha		"0"				Linear 0.9 0.1
 }
@@ -378,14 +377,22 @@ event HudSpyDisguiseHide
 
 event HudSpyDisguiseFadeIn
 {
-	RunEvent HudSpyDisguiseChanged	0
-	Animate PlayerStatusSpyImage			Alpha		"255"			Linear 0.9 0.1	
+	//RunEvent HudSpyDisguiseChanged	0
+	//Animate PlayerStatusSpyImage			Alpha		"255"			Linear 0.9 0.1	
+	
+	// omp -- uncomment following lines for spy disguise image.
+	//Animate PlayerStatusClassImage			Alpha		"255"			Linear 0.0 0.0
+	//Animate classmodelpanel					Position	"10 r154"		Linear 0.0 0.0
 }
 
 event HudSpyDisguiseFadeOut
 {
-	RunEvent HudSpyDisguiseChanged	0
-	Animate PlayerStatusSpyImage			Alpha		"0"				Linear 0.9 0.1	
+	//RunEvent HudSpyDisguiseChanged	0
+	//Animate PlayerStatusSpyImage			Alpha		"0"				Linear 0.9 0.1	
+	
+	// omp -- uncomment following lines for spy disguise image.
+	//Animate PlayerStatusClassImage			Alpha		"0"				Linear 0.0 0.0
+	//Animate classmodelpanel					Position	"9999 9999"		Linear 0.0 0.0
 }
 
 //===========================================
@@ -430,14 +437,14 @@ event HudReplayTipOut
 
 event HudTournamentSetupPanelOpen
 {
-	Animate HudTournamentSetup	Position	"c-60 -70"	Linear 0.0 0.001
-	Animate HudTournamentSetup	Position	"c-60 64"	Spline 0.001 0.2
+	Animate HudTournamentSetup	Position	"c-60 -72"	Linear 0.0 0.001
+	Animate HudTournamentSetup	Position	"c-60 60"	Spline 0.001 0.2
 }
 
 event HudTournamentSetupPanelClose
 {
-	Animate HudTournamentSetup	Position	"c-60 64"	Linear 0.0 0.001
-	Animate HudTournamentSetup	Position	"c-60 -70"	Spline 0.001 0.2
+	Animate HudTournamentSetup	Position	"c-60 60"	Linear 0.0 0.001
+	Animate HudTournamentSetup	Position	"c-60 -72"	Spline 0.001 0.2
 }
 
 
@@ -750,6 +757,17 @@ event NotificationsPresentBlinkStop
 
 event DamagedPlayer
 {
+	//Animate	OmpCrosshairPlus		FgColor "255 0 0 255"		Accel 0.0 0.0
+	//Animate	OmpCrosshairPlus		FgColor "255 0 255 255"		Accel 0.2 0.0
+
+	//Animate	OmpCrosshairPlusSmall	FgColor "255 0 0 255"		Accel 0.0 0.0
+	//Animate	OmpCrosshairPlusSmall	FgColor "255 0 255 255"		Accel 0.2 0.0
+
+	//Animate	OmpCrosshairDot			FgColor "255 0 0 255"		Accel 0.0 0.0
+	//Animate	OmpCrosshairDot			FgColor "255 0 255 255"		Accel 0.2 0.0
+
+	//Animate	OmpCrosshairCircle		FgColor "255 0 0 255"		Accel 0.0 0.0
+	//Animate	OmpCrosshairCircle		FgColor "225 225 225 30"	Accel 0.2 0.0
 }
 
 //===========================================
@@ -794,3 +812,49 @@ event HudReadyPulseEnd
 	StopEvent HudReadyPulseLoop		0.0
 }
 
+// Respec in Win
+event RespecEarnedPulse
+{
+	Animate	RespecTextLabelWin	FgColor	"TanLight"		Linear 0.0 0.1
+	Animate	RespecTextLabelWin	FgColor	"RedSolid"		Linear 0.3 0.4
+	
+	RunEvent RespecEarnedPulseLoop		0.5
+}
+
+event RespecEarnedPulseLoop
+{
+	RunEvent RespecEarnedPulse			0.0
+}
+
+event RespecEarnedPulseEnd
+{
+	Animate	RespecTextLabelWin 	FgColor		"TanLight"		Linear 0.0 0.1
+	
+	StopEvent RespecEarnedPulse			0.0
+	StopEvent RespecEarnedPulseLoop		0.0
+}
+
+// Respec on Loss
+event RespecEarnedPulseLoss
+{
+	Animate	RespecTextLabelLoss	FgColor	"TanLight"		Linear 0.0 0.1
+	Animate	RespecTextLabelLoss	FgColor	"RedSolid"		Linear 0.3 0.4
+	
+	RunEvent RespecEarnedPulseLoopLoss		0.5
+}
+
+event RespecEarnedPulseLoopLoss
+{
+	RunEvent RespecEarnedPulseLoss			0.0
+}
+
+event RespecEarnedPulseEndLoss
+{
+	Animate	RespecTextLabelLoss FgColor		"TanLight"		Linear 0.0 0.1
+	Animate	RespecTextLabelLoss FgColor		"TanLight"		Linear 0.0 0.1
+	
+	StopEvent RespecEarnedPulseLoss		0.0
+	StopEvent RespecEarnedPulseLoopLoss	0.0
+}
+
+//

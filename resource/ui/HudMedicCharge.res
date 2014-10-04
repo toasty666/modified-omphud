@@ -22,10 +22,10 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"ChargeLabel"
 		"xpos"			"200"
-		"ypos"			"12"
+		"ypos"			"39" // omp -- -9 Mac fix.
 		"zpos"			"2"
 		"wide"			"130"
-		"tall"			"38"
+		"tall"			"56" // omp -- +18 Mac fix.
 		"autoResize"	"1"
 		"pinCorner"		"2"
 		"visible"		"1"
@@ -40,19 +40,19 @@
 		
 		"font_minmode"	"FuturaHeavy36"
 		"xpos_minmode"	"150"
-		"ypos_minmode"	"2"
+		"ypos_minmode"	"28" // omp -- -6 Mac fix.
 		"wide_minmode"	"91"
-		"tall_minmode"	"25"
+		"tall_minmode"	"37" // omp -- +12 Mac fix.
 	}
 	"ChargeLabelShadow"
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"ChargeLabelShadow"
 		"xpos"			"202"
-		"ypos"			"14"
+		"ypos"			"41"
 		"zpos"			"2"
 		"wide"			"130"
-		"tall"			"38"
+		"tall"			"56"
 		"autoResize"	"1"
 		"pinCorner"		"2"
 		"visible"		"1"
@@ -67,9 +67,37 @@
 		
 		"font_minmode"	"FuturaHeavy36"
 		"xpos_minmode"	"151"
-		"ypos_minmode"	"3"
+		"ypos_minmode"	"29"
 		"wide_minmode"	"91"
-		"tall_minmode"	"25"
+		"tall_minmode"	"37"
+	}
+
+	"IndividualChargesLabel"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"IndividualChargesLabel"
+		"xpos"			"200"
+		"ypos"			"39" // omp -- -9 Mac fix.
+		"zpos"			"3" // omp -- place over charge label shadow.
+		"wide"			"130"
+		"tall"			"56" // omp -- +18 Mac fix.
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"#TF_IndividualUberchargesMinHUD"
+		"textAlignment"	"center"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"font"			"FuturaHeavy56"
+		"fgcolor"		"OmpAmmoClip"
+		
+		"font_minmode"	"FuturaHeavy36"
+		"xpos_minmode"	"150"
+		"ypos_minmode"	"28" // omp -- -6 Mac fix.
+		"wide_minmode"	"91"
+		"tall_minmode"	"37" // omp -- +12 Mac fix.
 	}
 	
 	"ChargeMeterLabel"
@@ -77,7 +105,7 @@
 		"ControlName"			"CExLabel"
 		"fieldName"				"ChargeMeterLabel"
 		"xpos"					"25"
-		"ypos"					"0"
+		"ypos"					"36"
 		"zpos"					"3"
 		"wide"					"150"
 		"tall"					"6"
@@ -94,7 +122,7 @@
 		"fgcolor_override"		"OmpMeterLabel"
 		
 		"xpos_minmode"			"50"
-		"ypos_minmode"			"20"
+		"ypos_minmode"			"52"
 		"wide_minmode"			"100"
 	}
 	
@@ -104,7 +132,7 @@
 		"fieldName"		"ChargeMeter"
 		"font"			"Default"
 		"xpos"			"25"
-		"ypos"			"0"
+		"ypos"			"36"
 		"zpos"			"2"
 		"wide"			"150"
 		"tall"			"6"				
@@ -115,13 +143,133 @@
 		"textAlignment"	"Left"
 		"dulltext"		"0"
 		"brighttext"	"0"
-		"bgcolor_override"	"OmpDarkBG"
+		"bgcolor_override"	"0 0 0 0"
 		"fgcolor_override"	"255 255 255 255"
 		
 		"xpos_minmode"			"50"
-		"ypos_minmode"			"20"
+		"ypos_minmode"			"52"
 		"wide_minmode"			"100"
 	}		
+
+	"ChargeMeterBG"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"TargetBG"
+		"xpos"			"25"
+		"ypos"			"36"
+		"zpos"			"1"
+		"wide"			"150"
+		"tall"			"6"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillcolor"		"OmpDarkBG"
+		
+		"xpos_minmode"			"50"
+		"ypos_minmode"			"52"
+		"wide_minmode"			"100"
+	}
+
+	"ChargeMeter1"
+	{	
+		"ControlName"	"ContinuousProgressBar"
+		"fieldName"		"ChargeMeter1"
+		"font"			"Default"
+		"xpos"			"25"
+		"ypos"			"36"
+		"zpos"			"2"
+		"wide"			"36"
+		"tall"			"6"				
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"textAlignment"	"Left"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"bgcolor_override"	"0 0 0 0"
+		"fgcolor_override"	"255 255 255 255"
+		
+		"xpos_minmode"			"50"
+		"ypos_minmode"			"52"
+		"wide_minmode"			"24"
+	}
+
+	"ChargeMeter2"
+	{	
+		"ControlName"	"ContinuousProgressBar"
+		"fieldName"		"ChargeMeter2"
+		"font"			"Default"
+		"xpos"			"63"
+		"ypos"			"36"
+		"zpos"			"2"
+		"wide"			"36"
+		"tall"			"6"				
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"textAlignment"	"Left"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"bgcolor_override"	"0 0 0 0"
+		"fgcolor_override"	"255 255 255 255"
+		
+		"xpos_minmode"			"76"
+		"ypos_minmode"			"52"
+		"wide_minmode"			"23"
+	}
+
+	"ChargeMeter3"
+	{	
+		"ControlName"	"ContinuousProgressBar"
+		"fieldName"		"ChargeMeter3"
+		"font"			"Default"
+		"xpos"			"101"
+		"ypos"			"36"
+		"zpos"			"2"
+		"wide"			"36"
+		"tall"			"6"			
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"textAlignment"	"Left"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"bgcolor_override"	"0 0 0 0"
+		"fgcolor_override"	"255 255 255 255"
+		
+		"xpos_minmode"			"101"
+		"ypos_minmode"			"52"
+		"wide_minmode"			"23"
+	}
+
+	"ChargeMeter4"
+	{	
+		"ControlName"	"ContinuousProgressBar"
+		"fieldName"		"ChargeMeter4"
+		"font"			"Default"
+		"xpos"			"139"
+		"ypos"			"36"
+		"zpos"			"2"
+		"wide"			"36"
+		"tall"			"6"			
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"textAlignment"	"Left"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"bgcolor_override"	"0 0 0 0"
+		"fgcolor_override"	"255 255 255 255"
+		
+		"xpos_minmode"			"126"
+		"ypos_minmode"			"52"
+		"wide_minmode"			"24"
+	}
 	
 	"HealthClusterIcon"
 	{
@@ -136,5 +284,21 @@
 		"enabled"		"1"
 		"image"			"../hud/ico_health_cluster"
 		"scaleImage"	"1"	
-	}		
+	}	
+	
+	"ResistIcon"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"ResistIcon"
+		"xpos"			"0"
+		"ypos"			"-25"
+		"wide"			"24"
+		"tall"			"24"
+		"visible"		"0"
+		"visible_minmode"		"0"
+		"enabled"		"1"
+		"image"			"../HUD/defense_buff_bullet_blue"
+		"scaleImage"	"1"	
+	}
+	
 }

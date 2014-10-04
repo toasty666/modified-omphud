@@ -4,12 +4,11 @@
 	{
 		"ControlName"		"CWaveStatusPanel"
 		"fieldName"			"WaveStatusPanel"
-		"xpos"				"c-200"
+		"xpos"				"c-300"
 		"ypos"				"0"
 		"zpos"				"0"
-		"wide"				"400"
+		"wide"				"600"
 		"tall"				"67"
-		"ypos_minmode"		"-7"
 		"visible"			"1"
 		"enabled"			"1"
 	}
@@ -27,10 +26,10 @@
 		"enabled"			"1"
 	}
 	
-	"TankStatusPanel"
+	"BossStatusPanel"
 	{
-		"ControlName"		"CTankStatusPanel"
-		"fieldName"			"TankStatusPanel"
+		"ControlName"		"CMvMBossStatusPanel"
+		"fieldName"			"BossStatusPanel"
 		"xpos"				"0"
 		"ypos"				"0"
 		"zpos"				"0"
@@ -43,7 +42,7 @@
 		"pin_corner_to_sibling"        "4"          
 		"pin_to_sibling_corner"        "6"  
 	}
-	
+
 	"CurrencyStatusPanel"
 	{
 		"ControlName"		"CCurrencyStatusPanel"

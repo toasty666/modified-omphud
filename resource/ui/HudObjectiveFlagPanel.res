@@ -22,11 +22,11 @@
 	{
 		"ControlName"	"CTFImagePanel"
 		"fieldName"		"LeftSideBG"
-		"xpos"			"c-120"
-		"ypos"			"r20"
+		"xpos"			"c-100"
+		"ypos"			"r40"
 		"zpos"			"-1"
-		"wide"			"120"
-		"tall"	 		"4"
+		"wide"			"100"
+		"tall"	 		"24"
 		"autoResize"	"0"
 		"pinCorner"		"0"
 		"visible"		"1"
@@ -60,10 +60,10 @@
 		"ControlName"	"CTFImagePanel"
 		"fieldName"		"RightSideBG"
 		"xpos"			"c0"
-		"ypos"			"r20"
+		"ypos"			"r40"
 		"zpos"			"-1"
-		"wide"			"120"
-		"tall"	 		"4"
+		"wide"			"100"
+		"tall"	 		"24"
 		"autoResize"	"0"
 		"pinCorner"		"0"
 		"visible"		"1"
@@ -126,16 +126,16 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"BlueScore"
-		"xpos"			"c-120"
-		"ypos"			"r50"
+		"xpos"			"c-99"
+		"ypos"			"r40"
 		"zpos"			"8"
-		"wide"			"39"
-		"tall"			"29"
+		"wide"			"99"
+		"tall"			"24"
 		"visible"		"1"
 		"enabled"		"1"
 		"textAlignment"	"west"	
 		"labelText"		"%bluescore%"
-		"font"			"Futura40"
+		"font"			"Futura32"
 		"fgcolor"		"OmpText"
 		
 		"if_hybrid"
@@ -158,17 +158,21 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"BlueScoreShadow"
-		"xpos"			"c-119"
-		"ypos"			"r49"
+		"xpos"			"9999"
+		"ypos"			"9999"
 		"zpos"			"7"
-		"wide"			"39"
-		"tall"			"29"
+		"wide"			"75"
+		"tall"			"35"
+		"tall_hidef"	"100"
+		"tall_lodef"	"75"
 		"visible"		"1"
 		"enabled"		"1"
 		"textAlignment"	"west"	
 		"labelText"		"%bluescore%"
-		"font"			"Futura40"
-		"fgcolor"		"OmpShadow"
+		"font"			"HudFontBig"
+		"font_hidef"	"HudFontGiant"
+		"font_lodef"	"HudFontGiant"
+		"fgcolor"		"Black"
 		
 		"if_hybrid"
 		{
@@ -190,16 +194,16 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"RedScore"
-		"xpos"			"c80"
-		"ypos"			"r50"
+		"xpos"			"c0"
+		"ypos"			"r40"
 		"zpos"			"8"
-		"wide"			"39"
-		"tall"			"29"
+		"wide"			"99"
+		"tall"			"24"
 		"visible"		"1"
 		"enabled"		"1"
 		"textAlignment"	"east"	
 		"labelText"		"%redscore%"
-		"font"			"Futura40"
+		"font"			"Futura32"
 		"fgcolor"		"OmpText"	
 		
 		"if_hybrid"
@@ -222,17 +226,21 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"RedScoreShadow"
-		"xpos"			"c81"
-		"ypos"			"r49"
+		"xpos"			"9999"
+		"ypos"			"9999"
 		"zpos"			"7"
-		"wide"			"39"
-		"tall"			"29"
+		"wide"			"75"
+		"tall"			"35"
+		"tall_hidef"	"100"
+		"tall_lodef"	"75"
 		"visible"		"1"
 		"enabled"		"1"
 		"textAlignment"	"east"	
 		"labelText"		"%redscore%"
-		"font"			"Futura40"
-		"fgcolor"		"OmpShadow"
+		"font"			"HudFontBig"
+		"font_hidef"	"HudFontGiant"
+		"font_lodef"	"HudFontGiant"
+		"fgcolor"		"Black"		
 		
 		"if_hybrid"
 		{
@@ -254,11 +262,11 @@
 	{
 		"ControlName"	"CTFImagePanel"
 		"fieldName"		"OutlineImage"
-		"xpos"			"9999"
-		"ypos"			"9999"
+		"xpos"			"c0"
+		"ypos"			"r38"
 		"zpos"			"9"
-		"wide"			"100"
-		"tall"			"50"
+		"wide"			"0"
+		"tall"			"0"
 		"visible"		"1"
 		"enabled"		"1"
 		"image"			"../hud/objectives_flagpanel_carried_outline"
@@ -269,11 +277,11 @@
 	{
 		"ControlName"	"ImagePanel"
 		"fieldName"		"CarriedImage"
-		"xpos"			"9999"
-		"ypos"			"9999"
+		"xpos"			"c-16"
+		"ypos"			"r54"
 		"zpos"			"10"
-		"wide"			"100"
-		"tall"			"100"
+		"wide"			"32"
+		"tall"			"32"
 		"visible"		"0"
 		"enabled"		"1"
 		"image"			"../hud/objectives_flagpanel_carried_red"
@@ -281,12 +289,12 @@
 		
 		"if_hybrid"
 		{
-			"ypos"		"9999"
+			"ypos"		"r72"
 		}
 		
 		"if_specialdelivery"
 		{
-			"visible"	"r142" // omp -- wtf? typo?
+			"ypos"		"r44"
 		}
 	}		
 	
@@ -294,10 +302,10 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"PlayingTo"
-		"xpos"			"c-120"
+		"xpos"			"c-100"
 		"ypos"			"r16"
 		"zpos"			"4"
-		"wide"			"240"
+		"wide"			"200"
 		"tall"			"14"
 		"visible"		"1"
 		"enabled"		"1"
@@ -328,10 +336,10 @@
 	{
 		"ControlName"	"ImagePanel"
 		"fieldName"		"PlayingToBG"
-		"xpos"			"c-120"
+		"xpos"			"c-100"
 		"ypos"			"r16"
 		"zpos"			"-1"
-		"wide"			"240"
+		"wide"			"200"
 		"tall"			"14"
 		"autoResize"	"0"
 		"pinCorner"		"0"
@@ -359,34 +367,34 @@
 	{
 		"ControlName"	"CTFFlagStatus"
 		"fieldName"		"BlueFlag"
-		"xpos"			"c-80"
-		"ypos"			"r82"
+		"xpos"			"c-60"
+		"ypos"			"r64"
 		"zpos"			"5"
-		"wide"			"80"
-		"tall"			"80"
+		"wide"			"60"
+		"tall"			"60"
 		"visible"		"1"
 		"enabled"		"1"
 		
 		"if_hybrid"
 		{
 			"visible"	"0"
-			"ypos"		"r102"
+			"ypos"		"r90"
 		}
 		
 		"if_hybrid_single"
 		{
-			"xpos"		"c-40"
+			"xpos"		"c-30"
 		}
 		
 		"if_hybrid_double"
 		{
-			"xpos"		"c-80"
+			"xpos"		"c-60"
 		}
 
 		"if_specialdelivery"
 		{
-			"xpos"		"c-40"
-			"ypos"		"r82"
+			"xpos"		"c-30"
+			"ypos"		"r62"
 		}
 		
 		"if_no_flags"
@@ -406,22 +414,22 @@
 		"ControlName"	"CTFFlagStatus"
 		"fieldName"		"RedFlag"
 		"xpos"			"c0"
-		"ypos"			"r82"
+		"ypos"			"r64"
 		"zpos"			"5"
-		"wide"			"80"
-		"tall"			"80"
+		"wide"			"60"
+		"tall"			"60"
 		"visible"		"1"
 		"enabled"		"1"
 				
 		"if_hybrid"
 		{
 			"visible"	"0"
-			"ypos"		"r102"
+			"ypos"		"r90"
 		}
 		
 		"if_hybrid_single"
 		{
-			"xpos"		"c-40"
+			"xpos"		"c-30"
 		}
 		
 		"if_hybrid_double"
@@ -431,8 +439,8 @@
 
 		"if_specialdelivery"
 		{
-			"xpos"		"c-40"
-			"ypos"		"r82"
+			"xpos"		"c-30"
+			"ypos"		"r62"
 		}
 		
 		"if_no_flags"
@@ -445,22 +453,22 @@
 	{
 		"ControlName"	"CTFArrowPanel"
 		"fieldName"		"CaptureFlag"
-		"xpos"			"c-40"
-		"ypos"			"r92"
+		"xpos"			"c-30"
+		"ypos"			"r72"
 		"zpos"			"5"
-		"wide"			"80"
-		"tall"			"80"
+		"wide"			"60"
+		"tall"			"60"
 		"visible"		"0"
 		"enabled"		"1"
 		
 		"if_hybrid"
 		{
-			"ypos"		"r102"
+			"ypos"		"r90"
 		}
 		
 		"if_specialdelivery"
 		{
-			"ypos"		"r82"
+			"ypos"		"r62"
 		}
 	}
 	
@@ -468,14 +476,19 @@
 	{
 		"ControlName"	"ImagePanel"
 		"fieldName"		"SpecCarriedImage"
-		"xpos"			"9999"
-		"ypos"			"9999"
-		"zpos"			"10"
-		"wide"			"100"
-		"tall"			"100"
+		"xpos"			"c-16"
+		"ypos"			"r84"
+		"zpos"			"-1"
+		"wide"			"32"
+		"tall"			"32"
 		"visible"		"0"
 		"enabled"		"1"
 		"image"			"../hud/objectives_flagpanel_carried_red"
 		"scaleImage"	"1"
+		
+		"if_hybrid"
+		{
+			"ypos"		"r102"
+		}
 	}			
 }

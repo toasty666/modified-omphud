@@ -11,6 +11,9 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 	}
+	"specgui"
+	{
+	}
 	"topbar"
 	{
 		"ControlName"		"Panel"
@@ -59,7 +62,7 @@
 		"ControlName"		"CExLabel"
 		"fieldName"		"ReinforcementsLabel"
 		"xpos"			"c-300"
-		"ypos"			"40"
+		"ypos"			"32"
 		"wide"			"600"
 		"tall"			"20"
 		"autoResize"		"0"
@@ -256,10 +259,10 @@
 		"fieldName"		"TipLabel"
 		"xpos"			"9999"
 		"ypos"			"9999"
-		"wide"			"130"
+		"wide"			"145"
 		"wide_hidef"	"230"
 		"wide_lodef"	"240"
-		"tall"			"54"
+		"tall"			"64"
 		"tall_hidef"	"70"
 		"tall_lodef"	"70"
 		"autoResize"		"0"
@@ -280,7 +283,7 @@
 		"ControlName"	"CItemModelPanel"
 		"fieldName"		"itempanel"
 		"xpos"			"r210"
-		"ypos"			"c16"
+		"ypos"			"c113"
 		"zpos"			"1"
 		"wide"			"200"
 		"tall"			"1000"
@@ -318,7 +321,7 @@
 			"pinCorner"		"0"
 			"visible"		"1"
 			"enabled"		"1"
-			"fillcolor"		"OmpMediumBG"
+			"fillcolor"		"OmpLightBG"
 		}
 		
 		"itemmodelpanel"
@@ -347,26 +350,6 @@
 			"textAlignment"	"north-west"
 			"dulltext"		"0"
 			"brighttext"	"0"
-		}
-		
-		"attriblabel"
-		{
-			"ControlName"	"CExLabel"
-			"fieldName"		"attriblabel"
-			"font"			"ItemFontAttribLarge"
-			"xpos"			"0"
-			"ypos"			"30"
-			"zpos"			"2"
-			"wide"			"140"
-			"tall"			"60"
-			"autoResize"	"0"
-			"pinCorner"		"0"
-			"visible"		"1"
-			"enabled"		"1"
-			"labelText"		"%attriblist%"
-			"textAlignment"	"south"
-			"fgcolor"		"235 226 202 255"
-			"centerwrap"	"1"
 		}
 	}	
 }
